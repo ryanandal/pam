@@ -1,0 +1,37 @@
+
+<ion-view view-title="Sources">
+  <ion-content>
+    <div class="list sources">
+      <div class="item item-toggle item-avatar light-color-scheme"><img src="img/cineplex.jpg"/>
+        <h2>Theatre</h2>
+        <p class="lighten">Available only in theatres</p>
+        <label class="toggle">
+          <input type="checkbox" ng-model="sources.theatre" ng-change="toggleOption()"/>
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle item-avatar light-color-scheme"><img src="img/netflix.jpg"/>
+        <h2>Netflix Originals</h2>
+        <p class="lighten">Available only on Netflix</p>
+        <label class="toggle">
+          <input type="checkbox" ng-model="sources.netflix" ng-change="toggleOption()"/>
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle item-avatar light-color-scheme"><img src="img/hulu.jpg"/>
+        <h2>Hulu Originals</h2>
+        <p class="lighten">Available only on Hulu</p>
+        <label class="toggle">
+          <input type="checkbox" ng-model="sources.hulu" ng-change="toggleOption()"/>
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

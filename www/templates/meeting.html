@@ -1,0 +1,22 @@
+
+<ion-view id="meeting" view-title="Directory">
+  <ion-content>
+    <div class="list">
+      <div ng-if="recentDir &amp;&amp; recentDir.length" class="item item-divider">Recent</div>
+      <div ng-repeat="employee in recentDir" ui-sref="meeting-thanks" ng-click="pingEmployee(employee)" class="item"><img ng-src="http://lorempixel.com/200/200/cats/"/>
+        <h2>{{employee.real_name}}</h2>
+        <p>{{employee.email}}</p>
+      </div>
+      <svg id="big-trangle" xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 100 100" preserveaspectratio="none">
+        <path d="M0 0 L50 100 L100 0 Z"></path>
+      </svg>
+      <div id="full-directory">
+        <div class="item item-divider">Full Directory</div>
+        <div ng-repeat="employee in companyDir" ui-sref="meeting-thanks" ng-click="pingEmployee(employee)" class="item"><img ng-src="http://lorempixel.com/200/200/cats/"/>
+          <h2>{{employee.real_name}}</h2>
+          <p>{{employee.email}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

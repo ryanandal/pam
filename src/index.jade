@@ -1,0 +1,30 @@
+doctype html
+html(lang = "en")
+head
+    meta(charset='utf-8')  
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width') 
+    title PAM
+    link(href='css/ionic.app.css', rel='stylesheet')
+    //- cordova script (this will be a 404 during development)
+    script(src='cordova.js')
+    //- plugins
+    script(src='lib/ionic/js/ionic.bundle.js')
+    script(src='lib/angular-local-storage/dist/angular-local-storage.min.js')
+    //- your app's js
+    script(src='js/app.js')
+    script(src='js/controllers.js')
+    script(src='js/services.js')
+  body(ng-app='pam')
+    #authorize-div(style='display: none')
+      span Authorize access to Google Sheets API
+      // Button for the user to click to initiate auth sequence
+      button#authorize-button(onclick='handleAuthClick(event)')
+        | Authorize
+      
+    //- The nav bar that will be updated as we navigate between views.
+    ion-nav-bar.bar-stable
+      ion-nav-back-button
+    //- The views will be rendered in the <ion-nav-view> directive below
+    //- Templates are in the /templates folder (but you could also
+    //- have templates inline in this html file if you'd like).
+    ion-nav-view

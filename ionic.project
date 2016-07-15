@@ -1,0 +1,19 @@
+{
+  "name": "pam",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "css",
+    "img",
+    "js-app",
+    "js-controllers",
+    "js-services",
+    "templates-index",
+    "templates-components",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "src/**/*",
+    "!www/lib/**/*"
+  ]
+}

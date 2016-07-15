@@ -1,0 +1,15 @@
+ion-view#home(view-title='Welcome')
+  ion-content
+    .list
+      .item(ui-sref = "meeting")#btn-meeting
+        //- i.icon.ion-chatbubbles
+        h1 Meeting
+        p With someone here
+      .item(ui-sref = "delivery")#btn-delivery
+        //- i.icon.ion-pizza
+        h1 Delivery
+        p To be dropped off
+      .item(ui-sref = "general")#btn-help
+        //- i.icon.ion-sad-outline
+        h1 Help me
+        p I don't know where I am

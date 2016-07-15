@@ -1,0 +1,29 @@
+
+<ion-view view-title="Teasr">
+  <ion-content class="login center padding">
+    <div class="list">
+      <form ng-submit="doLogin()">
+        <label class="item item-input">
+          <input type="email" ng-model="loginData.userEmail" placeholder="E-mail"/>
+        </label>
+        <label class="item item-input">
+          <input type="password" ng-model="loginData.userPassword" placeholder="Password"/>
+        </label>
+      </form>
+      <button ng-click="doLogin()" class="button button-block button-stable">Sign in</button>
+      <div class="row">
+        <div class="col"><a ng-click="doLoginSocial('facebook')" class="button button-block button-stable button icon icon-center ion-social-facebook center"></a></div>
+        <div class="col"><a ng-click="doLoginSocial('twitter')" class="button button-block button-stable button icon icon-center ion-social-twitter center"></a></div>
+        <div class="col"><a ng-click="doLoginSocial('google')" class="button button-block button-stable button icon icon-center ion-social-google center"></a></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button ng-click="signUp()" class="button button-block button-clear">Sign up</button>
+        </div>
+        <div class="col">
+          <button ng-click="changePassword('lost')" class="button button-block button-clear">Forgot password?</button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
