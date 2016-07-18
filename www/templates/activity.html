@@ -1,9 +1,0 @@
-
-<ion-view view-title="Activity">
-  <ion-content>
-    <div class="list activity-list"><a ng-repeat="activity in activities" class="item item-thumbnail-left light-color-scheme"><img style="background-image: url({{activity.video.posterImg}}); background-position: 50% 50%; background-size: cover"/><span ng-if="activity.type=='comment'">
-          <p><span class="lighten">You wrote a review for&nbsp;</span><b>{{activity.video.title}}:&nbsp;</b><span class="lighten">{{activity.value.comment}}&nbsp;</span><span class="lighten">- &nbsp;</span><span am-time-ago="(activity.publishDate / 1000) | amFromUnix" class="time"></span></p></span><span ng-if="activity.type=='vote'">
-          <p ng-if="activity.value.value==1">You up-voted&nbsp;<b>{{activity.video.title}}&nbsp;</b>- &nbsp;<span am-time-ago="(activity.publishDate / 1000) | amFromUnix" class="time"></span></p>
-          <p ng-if="activity.value.value==-1">You down-voted&nbsp;<b>{{activity.video.title}}&nbsp;</b>- &nbsp;<span am-time-ago="(activity.publishDate / 1000) | amFromUnix" class="time"></span></p></span></a></div>
-  </ion-content>
-</ion-view>
